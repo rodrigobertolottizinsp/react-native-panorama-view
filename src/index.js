@@ -65,5 +65,10 @@ export const PanoramaView: React.FC<PanoramaViewProps> = ({
 
 export default PanoramaView;
 
-const NativePanoramaView =
-  requireNativeComponent < PanoramaViewProps > 'PanoramaView';
+const NativePanoramaView = requireNativeComponent(
+  'PanoramaView',
+  PanoramaView,
+  {
+    nativeOnly: {},
+  },
+);
